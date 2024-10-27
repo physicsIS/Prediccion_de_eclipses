@@ -1,0 +1,48 @@
+\documentclass{Thesis}%Inicia el tipo de documento, tamaño de letra, tamaño de papel, doble cara, tipo artículo.
+\title{Título del reporte}%Título del documento, no necesariamente se desplega.
+\author{Nombre del autor}%Nombre del autor del documento, no necesariamente se desplega.
+\date{Fecha}%Fecha de cuando se realiza el documento, no necesariamente se desplega.
+
+% In your preamble 
+\makeatletter
+\newcommand*{\addFileDependency}[1]{% argument=file name and extension
+  \typeout{(#1)}
+  \@addtofilelist{#1}
+  \IfFileExists{#1}{}{\typeout{No file #1.}}
+}
+\makeatother
+ 
+\newcommand*{\myexternaldocument}[1]{%
+    \externaldocument{#1}%
+    \addFileDependency{#1.tex}%
+    \addFileDependency{#1.aux}%
+}
+% In your preamble
+ 
+%\myexternaldocument{METHOD.tex}
+
+%-----------INICIO DEL DOCUMENTO-----------%
+\begin{document}%Inicia el documento.
+
+%-----------PORTADA-----------%
+\subfile{portada}
+\newpage
+
+%-----------OBJETIVOS-----------%
+\subfile{objetivos}
+\newpage
+
+%-------Estado del Arte-------%
+\subfile{arte}
+\newpage
+
+%-------Metodología-------%
+\subfile{metodologia}
+\newpage
+
+\pagestyle{fancy}
+
+\bibliography{library.bib}
+\bibliographystyle{unsrtnat}
+
+\end{document}
