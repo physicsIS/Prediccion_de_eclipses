@@ -11,14 +11,14 @@
   \IfFileExists{#1}{}{\typeout{No file #1.}}
 }
 \makeatother
- 
+
 \newcommand*{\myexternaldocument}[1]{%
     \externaldocument{#1}%
     \addFileDependency{#1.tex}%
     \addFileDependency{#1.aux}%
 }
 % In your preamble
- 
+
 %\myexternaldocument{METHOD.tex}
 
 %-----------INICIO DEL DOCUMENTO-----------%
@@ -26,6 +26,13 @@
 
 %-----------PORTADA-----------%
 \subfile{portada}
+\newpage
+%-----------Resumen-----------%
+\subfile{resumen}
+\newpage
+
+%-----------Introducción-----------%
+\subfile{introduccion}
 \newpage
 
 %-----------OBJETIVOS-----------%
