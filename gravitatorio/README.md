@@ -1,0 +1,1 @@
+Estos fueron los intentos de una aproximación gravitacional al sistema Sol - Tierra - Luna

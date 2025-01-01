@@ -1,0 +1,1 @@
+Acá se esta trabajando desde una aproximación geométrica al sistema Sol - Tierra - Luna
